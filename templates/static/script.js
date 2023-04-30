@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('.container');
   const circleData = [
     { label: 'Get Motivated', url: 'https://youaremighty.fracz.com/' },
-    { label: 'Strength Program Generator', url: '{{ url_for("strength_program") }}' },
+    { label: 'Strength Program Generator', url: 'https://github.com/EricHier1/FitTechVet' },
     { label: 'Calorie Calcs', url: 'https://tdeecalculator.net/' },
     { label: 'Meal Planner', url: 'https://www.eatthismuch.com/' },
     { label: 'Developer Roadmaps', url: 'https://roadmap.sh/' },
