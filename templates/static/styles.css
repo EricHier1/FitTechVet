@@ -11,7 +11,7 @@ body {
 .banner {
     width: 100%;
     background-color: #343a40;
-    color: white;
+    color: rgb(128, 215, 252);
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
@@ -19,13 +19,18 @@ body {
 
 .banner h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 52px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .banner p {
     margin: 0;
-    font-size: 18px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
+
 
 .container {
     position: relative;

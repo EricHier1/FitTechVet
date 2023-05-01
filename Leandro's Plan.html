@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+
+    <style>
+        @media screen {
+            @page {
+                margin: 0.5cm;
+            }
+
+            div.row > div {
+                display: inline-block;
+                margin: 0.2cm;
+            }
+
+            div.row {
+                display: block;
+                margin: 0.2cm 0.2cm;
+            }
+        }
+
+        .table {
+            display: table;
+            border-spacing: 1px;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .row > div {
+            display: table-cell;
+            padding: 1px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .table td, .table td {
+            padding: .25rem .5rem .25rem .5rem;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2>Leandro's Plan</h2>
+            <p>This program was made using <code>streprogen</code>,
+                the Python strength program generator.
+                The latest version can be found at <code>https://pypi.python.org/pypi/streprogen/</code>.</p>
+
+            <h2>Program parameters</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-condensed">
+                        <tr>
+                            <th>Parameter name</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>duration</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>reps_per_exercise</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>intensity</td>
+                            <td>85.0</td>
+                        </tr>
+                        <tr>
+                            <td>units</td>
+                            <td>lbs</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <h2>Exercise information</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-condensed">
+                        <tr>
+                            <th>Name</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>[Min, Max]</th>
+                            <th>Weekly_inc.</th>
+                            <th>Reps</th>
+                            <th>intensity</th>
+                        </tr>
+
+                            <tr>
+                                <td colspan="8"><strong>Day 1</strong></td>
+                            </tr>
+                            
+                                <tr>
+                                    <td>&nbsp;Squats</td>
+                                    <td>315lbs</td>
+                                    <td>333.9lbs</td>
+                                    <td>[4, 10]</td>
+                                    <td>1.5%</td>
+                                        <td>25</td>
+
+                                        <td>85.0</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Bench Press</td>
+                                    <td>225lbs</td>
+                                    <td>238.5lbs</td>
+                                    <td>[4, 9]</td>
+                                    <td>1.5%</td>
+                                        <td>25</td>
+
+                                        <td>85.0</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Pull-ups</td>
+                                    <td colspan="7">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Dumbbell Chest Press</td>
+                                    <td colspan="7">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Dumbbell Rows</td>
+                                    <td colspan="7">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Hammer Curls or Tricep Extensions</td>
+                                    <td colspan="7">3 x 10</td>
+                                </tr>
+                            <tr>
+                                <td colspan="8"><strong>Day 2</strong></td>
+                            </tr>
+                            
+                                <tr>
+                                    <td>&nbsp;Deadlifts</td>
+                                    <td>225lbs</td>
+                                    <td>238.5lbs</td>
+                                    <td>[3, 9]</td>
+                                    <td>1.5%</td>
+                                        <td>25</td>
+
+                                        <td>85.0</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Overhead Press</td>
+                                    <td>112.5lbs</td>
+                                    <td>119.2lbs</td>
+                                    <td>[5, 10]</td>
+                                    <td>1.5%</td>
+                                        <td>25</td>
+
+                                        <td>85.0</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Dumbbell Rows</td>
+                                    <td colspan="7">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Barbell Lunges</td>
+                                    <td colspan="7">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Dumbbell Lateral Raises</td>
+                                    <td colspan="7">5 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Bicep Curls or Tricep Extensions</td>
+                                    <td colspan="7">5 x 8</td>
+                                </tr>
+                            <tr>
+                                <td colspan="8"><strong>Day 3</strong></td>
+                            </tr>
+                            
+                                <tr>
+                                    <td>&nbsp;Squats</td>
+                                    <td>315lbs</td>
+                                    <td>333.9lbs</td>
+                                    <td>[6, 7]</td>
+                                    <td>1.5%</td>
+                                        <td>25</td>
+
+                                        <td>85.0</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Bench Press</td>
+                                    <td>225lbs</td>
+                                    <td>238.5lbs</td>
+                                    <td>[6, 8]</td>
+                                    <td>1.5%</td>
+                                        <td>25</td>
+
+                                        <td>85.0</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Chin-ups</td>
+                                    <td colspan="7">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Barbell Romanian Deadlifts</td>
+                                    <td colspan="7">5 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Dumbbell Flyes or Push-ups</td>
+                                    <td colspan="7">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;Stomach</td>
+                                    <td colspan="7">2-3 x 20</td>
+                                </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <h2>Program</h2>
+                <table class="table table-condensed">
+
+                        <tr>
+                            <td colspan="6"><h3>Week 1</h3></td>
+                        </tr>
+
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 1</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>7 x 245lbs </td>
+                                            <td>7 x 245lbs </td>
+                                            <td>6 x 255lbs </td>
+                                            <td>5 x 265lbs </td>
+                                            <td>5 x 265lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>7 x 175lbs </td>
+                                            <td>7 x 175lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>5 x 190lbs </td>
+                                            <td>5 x 190lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Pull-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Chest Press</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Hammer Curls or Tricep Extensions</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 2</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Deadlifts</td>
+                                            <td>7 x 175lbs </td>
+                                            <td>7 x 175lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>5 x 190lbs </td>
+                                            <td>5 x 190lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Overhead Press</td>
+                                            <td>7 x 90lbs </td>
+                                            <td>7 x 90lbs </td>
+                                            <td>6 x 90lbs </td>
+                                            <td>5 x 95lbs </td>
+                                            <td>5 x 95lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Lunges</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Lateral Raises</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Bicep Curls or Tricep Extensions</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 3</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>6 x 255lbs </td>
+                                            <td>6 x 255lbs </td>
+                                            <td>6 x 255lbs </td>
+                                            <td>6 x 255lbs </td>
+                                            <td>6 x 255lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Chin-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Romanian Deadlifts</td>
+                                    <td colspan="5">5 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Flyes or Push-ups</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Stomach</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+
+                        <tr>
+                            <td colspan="6"><h3>Week 2</h3></td>
+                        </tr>
+
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 1</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>6 x 260lbs </td>
+                                            <td>6 x 260lbs </td>
+                                            <td>5 x 270lbs </td>
+                                            <td>5 x 270lbs </td>
+                                            <td>5 x 270lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>5 x 195lbs </td>
+                                            <td>5 x 195lbs </td>
+                                            <td>5 x 195lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Pull-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Chest Press</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Hammer Curls or Tricep Extensions</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 2</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Deadlifts</td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>5 x 195lbs </td>
+                                            <td>5 x 195lbs </td>
+                                            <td>5 x 195lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Overhead Press</td>
+                                            <td>6 x 95lbs </td>
+                                            <td>6 x 95lbs </td>
+                                            <td>5 x 95lbs </td>
+                                            <td>5 x 95lbs </td>
+                                            <td>5 x 95lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Lunges</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Lateral Raises</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Bicep Curls or Tricep Extensions</td>
+                                    <td colspan="5">2-3 x 20</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 3</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>7 x 255lbs </td>
+                                            <td>6 x 260lbs </td>
+                                            <td>6 x 260lbs </td>
+                                            <td>6 x 260lbs </td>
+                                            <td> </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>7 x 180lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td>6 x 185lbs </td>
+                                            <td> </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Chin-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Romanian Deadlifts</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Flyes or Push-ups</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Stomach</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+
+                        <tr>
+                            <td colspan="6"><h3>Week 3</h3></td>
+                        </tr>
+
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 1</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>5 x 275lbs </td>
+                                            <td>5 x 275lbs </td>
+                                            <td>5 x 275lbs </td>
+                                            <td>4 x 290lbs </td>
+                                            <td>4 x 290lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>5 x 200lbs </td>
+                                            <td>5 x 200lbs </td>
+                                            <td>5 x 200lbs </td>
+                                            <td>4 x 205lbs </td>
+                                            <td>4 x 205lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Pull-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Chest Press</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Hammer Curls or Tricep Extensions</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 2</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Deadlifts</td>
+                                            <td>5 x 200lbs </td>
+                                            <td>5 x 200lbs </td>
+                                            <td>4 x 205lbs </td>
+                                            <td>3 x 215lbs </td>
+                                            <td>3 x 215lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td></td>
+                                            <td>3 x 215lbs </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Overhead Press</td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Lunges</td>
+                                    <td colspan="5">2-3 x 20</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Lateral Raises</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Bicep Curls or Tricep Extensions</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 3</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>6 x 265lbs </td>
+                                            <td>6 x 265lbs </td>
+                                            <td>6 x 265lbs </td>
+                                            <td>6 x 265lbs </td>
+                                            <td> </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>6 x 190lbs </td>
+                                            <td>6 x 190lbs </td>
+                                            <td>6 x 190lbs </td>
+                                            <td>6 x 190lbs </td>
+                                            <td> </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Chin-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Romanian Deadlifts</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Flyes or Push-ups</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Stomach</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+
+                        <tr>
+                            <td colspan="6"><h3>Week 4</h3></td>
+                        </tr>
+
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 1</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>4 x 290lbs </td>
+                                            <td>4 x 290lbs </td>
+                                            <td>4 x 290lbs </td>
+                                            <td>4 x 290lbs </td>
+                                            <td>4 x 290lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>4 x 210lbs </td>
+                                            <td>4 x 210lbs </td>
+                                            <td>4 x 210lbs </td>
+                                            <td>4 x 210lbs </td>
+                                            <td>4 x 210lbs </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Pull-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Chest Press</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Hammer Curls or Tricep Extensions</td>
+                                    <td colspan="5">5 x 8</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 2</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Deadlifts</td>
+                                            <td>4 x 210lbs </td>
+                                            <td>4 x 210lbs </td>
+                                            <td>3 x 215lbs </td>
+                                            <td>3 x 215lbs </td>
+                                            <td>3 x 215lbs </td>
+                                    </tr>
+                                    <tr>
+                                            <td></td>
+                                            <td>3 x 215lbs </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Overhead Press</td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                            <td>5 x 100lbs </td>
+                                            <td> </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Rows</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Lunges</td>
+                                    <td colspan="5">5 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Lateral Raises</td>
+                                    <td colspan="5">3 x 10</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Bicep Curls or Tricep Extensions</td>
+                                    <td colspan="5">4 x 15</td>
+                                </tr>
+                            <tr>
+                                <td colspan="6"><h5>&nbsp;Day 3</h5></td>
+                            </tr>
+                            
+                            
+                            
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Squats</td>
+                                            <td>6 x 270lbs </td>
+                                            <td>6 x 270lbs </td>
+                                            <td>6 x 270lbs </td>
+                                            <td> </td>
+                                            <td> </td>
+                                    </tr>
+                                    <tr>
+                                            <td>&nbsp;&nbsp;&nbsp;Bench Press</td>
+                                            <td>6 x 195lbs </td>
+                                            <td>6 x 195lbs </td>
+                                            <td>6 x 195lbs </td>
+                                            <td> </td>
+                                            <td> </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Chin-ups</td>
+                                    <td colspan="5">3 x 5 (weighted if possible)</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Barbell Romanian Deadlifts</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Dumbbell Flyes or Push-ups</td>
+                                    <td colspan="5">4 x 8</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;Stomach</td>
+                                    <td colspan="5">2-3 x 20</td>
+                                </tr>
+                </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
