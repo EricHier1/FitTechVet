@@ -2,7 +2,7 @@
 
 This program generates customized strength plans based on the user's goals and current fitness level. 
 
-This program is a Flask application that uses the flask and render_template modules to create a basic web application. It imports a custom module called str_functions to access the create_gui function.
+This program is a Flask application. It imports a custom module called str_functions to access the create_gui function.
 
 ## Prerequisites
   Python 3.x
