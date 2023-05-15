@@ -15,8 +15,8 @@ This program is a Flask application. It imports a custom module called str_funct
 2. Install the required dependencies by running the following command:
 
   pip install flask
-  pip install tkinter
-  pip install treprogen
+  && pip install tkinter
+  && pip install treprogen
 
 ## Usage
 Open a terminal or command prompt and navigate to the directory where the program files are located.
